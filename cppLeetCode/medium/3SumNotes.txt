@@ -1,0 +1,8 @@
+if you move the initalization of vector<int> add to before the if statements you increase the runtime by a factor of 10
+
+Other optimizations: 
+1) stopping execution when you hit a postiive number
+2) jumping to the last occurence of the number (exists[nums[j]+100000];) 
+3) Using an array instead of map for truly O(1) searching
+4) Duplicate check by making sure you don't check past indexes (i, j = i+1, k > j) or else you search something already searched 
+5) ++I instead of I++
