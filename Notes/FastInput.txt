@@ -1,0 +1,5 @@
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+
+https://www.geeksforgeeks.org/fast-io-for-competitive-programming/
+
