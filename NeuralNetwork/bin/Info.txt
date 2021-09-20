@@ -1,0 +1,4 @@
+XOR neural network machine learning test 
+4 inputs 
+
+simple 

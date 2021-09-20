@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="WheelOfFortune"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Project"/>
+	<classpathentry kind="src" path="schoolWork"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
