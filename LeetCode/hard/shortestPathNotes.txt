@@ -1,0 +1,4 @@
+optimizations done, used vector to feed elements into the queue. 
+only tested the current element, didn't test before adding elements to the queue
+Looked for the min k value at any point, since you prefered the have the K elements
+BFS. 
