@@ -1,0 +1,7 @@
+optimization was pass by reference for word
+exiting immediately when finding the word
+and for some reason when reversing the words as well 
+
+Note: 
+for the reverse optimization it probably is a bug in there test data where they forgot to also check a reversal of the strings, since theoretically speaking reversing the words
+just adds extra runtime for no reason. 
