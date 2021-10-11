@@ -1,3 +1,5 @@
+//TODO: implement update function + reading up on how to implement RSQ
+
 #include <vector>
 #include <iostream>
 
