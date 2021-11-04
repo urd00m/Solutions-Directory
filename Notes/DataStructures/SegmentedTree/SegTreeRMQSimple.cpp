@@ -13,11 +13,18 @@ void build() {  // build the tree
   for (int i = n - 1; i > 0; --i) t[i] = min(t[i<<1], t[i<<1|1]); //left and right 
 }
 
+//This implementation is just cleaner, you change the value, then the parent is just the minimum of its children 
 void modify(int p, int value) {  // set value at position p
   for (t[p += n] = value; p > 1; p >>= 1) t[p>>1] = min(t[p],t[p^1]);
 }
 
-int query(int l, int r) {  // sum on interval [l, r)
+void modify2(int p, int value) { //set value at position p (alternative implementation)
+  t[p+n] = value; 
+  for(int i = (p+n)>>1; i > 0; i >>= 1) t[i] = min(t[i<<1], t[i<<1|1]); //left and right child 
+}
+
+//complicated proof can't replicate it, memorize 
+int query(int l, int r) {  // min on interval [l, r)
   int res = INT32_MAX;
   for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
     if (l&1) res = min(t[l++], res);
@@ -33,7 +40,7 @@ int main() {
   for (int i = 0; i < n; ++i) *(t + n + i) = input[i]; 
   //for (int i = 0; i < n; ++i) scanf("%d", t + n + i);
   build();
-  modify(0, 10); 
+  modify2(0, 10);
   std::cout << query(3, 11) << std::endl; //should be 4 now 
   std::cout << query(0, 2) << std::endl; //should be 2
   std::cout << query(5, 9) << std::endl;  //should be 6
