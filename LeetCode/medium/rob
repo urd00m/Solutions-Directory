@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        //dp, state setup 
+        long n = nums.size(); 
+        vector<int> dp(n+2, 0); 
+        
+        for(long i = 0; i < n; i++) {
+            //rob this house 
+            dp[i+2] = max(dp[i+2], dp[i]+nums[i]);
+            
+            //skip this hosue 
+            dp[i+1] = max(dp[i+1], dp[i]); 
+        }
+        
+        return max(dp[n], dp[n+1]); 
+    }
+};
