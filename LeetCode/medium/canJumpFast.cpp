@@ -15,3 +15,20 @@ public:
     
   
 };
+
+/*
+// other implementation
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int maxjump = -1;
+        for(int i = 0; (i < nums.size() && (i <= maxjump || maxjump == -1)); i++) {
+            int cur = nums[i] + i; 
+            maxjump = max(maxjump, cur); 
+            if(maxjump >= nums.size()-1) return true; 
+        }
+        return false; 
+    }
+};
+
+*/
