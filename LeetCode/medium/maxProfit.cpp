@@ -20,3 +20,28 @@ public:
         return ret; 
     }
 };
+
+/*
+//second pass around code
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        // buy at lows sell at peaks 
+        int ret = 0; 
+        int low = prices[0]; 
+        int high = prices[0]; 
+        for(long i = 1; i < prices.size(); i++) {
+            if(prices[i] < high) { // sell now 
+                ret += high - low; 
+                high = prices[i]; 
+                low = prices[i]; 
+            }
+            if(prices[i] > high) { // buy it 
+                high = prices[i]; 
+            }
+        }
+        ret += high-low; 
+        return ret; 
+    }
+};
+*/
